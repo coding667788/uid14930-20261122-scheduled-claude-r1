@@ -1,0 +1,22 @@
+{
+  "case": "sync_bound",
+  "instances": [
+    {"id": "I1", "copy": "CA", "generation": "G1", "counterless": false},
+    {"id": "I2", "copy": "CB", "generation": "G1", "counterless": false}
+  ],
+  "receipts": [
+    {"id": "R1", "fingerprint": "F1", "counter": 7, "signature_ok": true,
+     "challenge_ok": true, "candidates": ["I1"], "fixed": true, "cost": 1,
+     "recv_seq": 1, "window": [1, 5]},
+    {"id": "R2", "fingerprint": "F2", "counter": 5, "signature_ok": true,
+     "challenge_ok": true, "candidates": ["I2"], "fixed": false, "cost": 1,
+     "recv_seq": 2, "window": [6, 10]},
+    {"id": "R3", "fingerprint": "F3", "counter": 9, "signature_ok": true,
+     "challenge_ok": true, "candidates": ["I2"], "fixed": true, "cost": 1,
+     "recv_seq": 3, "window": [11, 15]}
+  ],
+  "syncs": [
+    {"id": "S1", "child": "I2", "parent": "I1", "parent_receipt": "R1"}
+  ],
+  "trusted_order": []
+}

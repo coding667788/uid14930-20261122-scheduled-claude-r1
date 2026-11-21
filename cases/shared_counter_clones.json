@@ -1,0 +1,19 @@
+{
+  "case": "shared_counter_clones",
+  "instances": [
+    {"id": "I1", "copy": "CA", "generation": "G1", "counterless": false},
+    {"id": "I2", "copy": "CB", "generation": "G1", "counterless": false}
+  ],
+  "receipts": [
+    {"id": "R1", "fingerprint": "F1", "counter": 5, "signature_ok": true,
+     "challenge_ok": true, "copy": "CA", "fixed": true, "cost": 1,
+     "recv_seq": 1, "window": [1, 4]},
+    {"id": "R2", "fingerprint": "F2", "counter": 5, "signature_ok": true,
+     "challenge_ok": true, "copy": "CB", "fixed": true, "cost": 1,
+     "recv_seq": 2, "window": [2, 5]},
+    {"id": "R3", "fingerprint": "F3", "counter": 5, "signature_ok": true,
+     "challenge_ok": true, "candidates": ["I1", "I2"], "fixed": false,
+     "cost": 4, "recv_seq": 3, "window": [3, 6]}
+  ],
+  "trusted_order": []
+}
